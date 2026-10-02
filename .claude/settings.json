@@ -1,4 +1,15 @@
 {
+  "extraKnownMarketplaces": {
+    "marketingskills": {
+      "source": {
+        "source": "github",
+        "repo": "coreyhaines31/marketingskills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "marketing-skills@marketingskills": true
+  },
   "hooks": {
     "SessionStart": [
       {
