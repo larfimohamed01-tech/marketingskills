@@ -5,10 +5,18 @@
         "source": "github",
         "repo": "coreyhaines31/marketingskills"
       }
+    },
+    "ecc": {
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/ECC"
+      },
+      "autoUpdate": true
     }
   },
   "enabledPlugins": {
-    "marketing-skills@marketingskills": true
+    "marketing-skills@marketingskills": true,
+    "ecc@ecc": true
   },
   "hooks": {
     "SessionStart": [
@@ -17,6 +25,11 @@
           {
             "type": "command",
             "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/install-ecc.sh\"",
+            "timeout": 300
           }
         ]
       }
